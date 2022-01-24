@@ -131,35 +131,28 @@ currency_convertor = item_2
                     31.7 Последним оставить else, при выполнений которого в консоль выведется (“Unknow currency”)
 
 Decision (30-31 points):
+
 target_currency = input('input currency ' )
 if currency_convertor:
     currency_usd = usd_item
     target_currency_amount = 50
     currency_result = 0
     if target_currency == 'eur':
-        currency_result = target_currency_amount / usd_eur_rate
+        currency_result = round(target_currency_amount / usd_eur_rate, 2)
         print(target_currency_amount, eur_item, '=', currency_result, usd_item)
     elif target_currency == 'uah':
-        currency_result = target_currency_amount / usd_uah_rate
+        currency_result = round(target_currency_amount / usd_uah_rate, 2)
         print(target_currency_amount, uah_item, '=', currency_result, usd_item)
     elif target_currency == 'chf':
-        currency_result = target_currency_amount / usd_chf_rate
+        currency_result = round(target_currency_amount / usd_chf_rate, 2)
         print(target_currency_amount, chf_item, '=', currency_result, usd_item)
     elif target_currency == 'rub':
-        currency_result = target_currency_amount / usd_rub_rate
+        currency_result = round(target_currency_amount / usd_rub_rate, 2)
         print(target_currency_amount, rub_item, '=', currency_result, usd_item)
     elif target_currency == 'byn':
-        currency_result = target_currency_amount / usd_byn_rate
+        currency_result = round(target_currency_amount / usd_byn_rate, 2)
         print(target_currency_amount, byn_item, '=', currency_result, usd_item)
     else:
         print('Unknown currency')
 else:
     print('Переменная currency_convertor =', item_3)
-
-result:
-if target_currency = eur_item --> 50 eur = 58.139534883720934 usd
-if target_currency = uah_item --> 50 uah = 1.9062142584826534 usd
-if target_currency = chf_item --> 50 chf = 54.94505494505494 usd
-if target_currency = rub_item --> 50 rub = 0.6956037840845855 usd
-if target_currency = byn_item --> 50 byn = 20.32520325203252 usd
-if target_currency = unknown currency --> Unknown currency
